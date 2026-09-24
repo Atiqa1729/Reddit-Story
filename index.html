@@ -3,395 +3,233 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Confessions - Real Life Stories & Secrets</title>
-    
+    <title>My Confessions - Latest Stories</title>
     <style>
         :root {
-            --primary-color: #111;
-            --accent-color: #d93838;
-            --bg-color: #f4f6f8;
-            --card-bg: #fff;
+            --primary-color: #ff4757;
+            --bg-color: #f8f9fa;
             --text-color: #333;
-            --meta-color: #777;
+            --card-bg: #fff;
+            --border-color: #e1e8ed;
         }
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        body { background-color: var(--bg-color); color: var(--text-color); line-height: 1.6; }
-        
-        header { background-color: var(--primary-color); color: #fff; padding: 25px 0; text-align: center; border-bottom: 4px solid var(--accent-color); }
-        header h1 { font-size: 2.5rem; letter-spacing: 2px; text-transform: uppercase; }
-        
-        nav { background-color: #222; padding: 12px 0; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        nav a { color: #fff; text-decoration: none; margin: 0 15px; font-size: 0.95rem; font-weight: 600; text-transform: uppercase; transition: color 0.3s; }
-        nav a:hover { color: var(--accent-color); }
 
-        .container { max-width: 1100px; margin: 30px auto; padding: 0 15px; }
-        .section-title { font-size: 1.5rem; text-transform: uppercase; border-bottom: 2px solid var(--primary-color); padding-bottom: 8px; margin-bottom: 25px; letter-spacing: 1px; }
-        
-        .stories-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 30px; align-items: start; }
-        .stories-list { display: flex; flex-direction: column; gap: 25px; }
-        
-        .main-story-card { background: var(--card-bg); border-radius: 10px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: transform 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; }
-        .main-story-card:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.08); }
-        
-        .story-img { width: 100%; height: 280px; object-fit: cover; display: block; }
-        .story-info { padding: 25px; }
-        .story-category { color: var(--accent-color); font-size: 0.85rem; font-weight: bold; text-transform: uppercase; margin-bottom: 8px; display: block; }
-        .story-title { font-size: 1.5rem; color: var(--primary-color); margin-bottom: 12px; line-height: 1.3; }
-        .story-title a { color: var(--primary-color); text-decoration: none; transition: color 0.2s; }
-        .story-title a:hover { color: var(--accent-color); }
-        .story-excerpt { color: #555; font-size: 0.95rem; margin-bottom: 20px; }
-        
-        .read-more-btn { display: inline-block; background-color: var(--primary-color); color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 0.9rem; transition: background 0.3s; }
-        .read-more-btn:hover { background-color: var(--accent-color); }
-        
-        /* Pagination Styles */
-        .pagination { display: flex; justify-content: center; align-items: center; gap: 10px; margin-top: 40px; }
-        .pagination button { background-color: var(--primary-color); color: #fff; border: none; padding: 10px 16px; border-radius: 5px; cursor: pointer; font-weight: 600; transition: background 0.3s; }
-        .pagination button:hover:not(:disabled) { background-color: var(--accent-color); }
-        .pagination button:disabled { background-color: #ccc; cursor: not-allowed; }
-        .pagination span { font-weight: 600; font-size: 1rem; color: var(--text-color); }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-        /* Sidebar Setup */
-        .sidebar { display: flex; flex-direction: column; gap: 20px; position: sticky; top: 20px; }
-        .sidebar-card { background: var(--card-bg); padding: 20px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; }
-        .sidebar-card h3 { font-size: 1.1rem; margin-bottom: 15px; color: var(--primary-color); border-bottom: 1px solid #eee; padding-bottom: 8px; text-align: left; }
-        .sidebar-list { list-style: none; padding: 0; text-align: left; }
-        .sidebar-list li { margin-bottom: 12px; border-bottom: 1px solid #f1f1f1; padding-bottom: 10px; }
-        .sidebar-list li:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-        .sidebar-list li a { color: var(--text-color); text-decoration: none; font-size: 0.9rem; font-weight: 600; transition: color 0.2s; display: block; }
-        .sidebar-list li a:hover { color: var(--accent-color); }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
 
-        /* Footer Section */
-        footer { background-color: var(--primary-color); color: #fff; text-align: center; padding: 40px 20px; margin-top: 60px; font-size: 0.9rem; }
-        .footer-links { margin-top: 20px; display: flex; justify-content: center; gap: 25px; }
-        .footer-links a { color: #aaa; text-decoration: none; font-size: 0.85rem; transition: color 0.3s; }
-        .footer-links a:hover { color: #fff; }
+        header {
+            background: var(--card-bg);
+            padding: 20px 40px;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
 
-        /* Responsive Mobile Breakpoint */
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .story-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            transition: transform 0.2s ease;
+        }
+
+        .story-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .story-title {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #111;
+            text-decoration: none;
+            display: block;
+        }
+
+        .story-title:hover {
+            color: var(--primary-color);
+        }
+
+        .story-excerpt {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+
+        .story-meta {
+            font-size: 12px;
+            color: #999;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .widget {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .widget-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 5px;
+            display: inline-block;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .page-btn {
+            padding: 8px 14px;
+            border: 1px solid var(--border-color);
+            background: var(--card-bg);
+            cursor: pointer;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .page-btn.active, .page-btn:hover {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
         @media (max-width: 768px) {
-            header h1 { font-size: 1.8rem; }
-            nav a { margin: 0 8px; font-size: 0.85rem; }
-            .stories-grid { grid-template-columns: 1fr; gap: 20px; }
-            .sidebar { position: static; }
-            .story-img { height: 220px; }
-            .story-info { padding: 18px; }
-            .story-title { font-size: 1.3rem; }
-            .container { padding: 0 10px; margin: 15px auto; }
+            .container {
+                grid-template-columns: 1fr;
+            }
+            header {
+                padding: 15px 20px;
+            }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>My Confession</h1>
+        <a href="#" class="logo">My Confessions</a>
+        <nav>
+            <a href="#" style="text-decoration: none; color: var(--text-color); font-weight: 600;">Home</a>
+        </nav>
     </header>
 
-    <nav>
-        <a href="/">Home</a>
-        <a href="#">Secret Stories</a>
-        <a href="#">Trending</a>
-        <a href="contact.html">Contact Us</a>
-    </nav>
-
     <div class="container">
-        <h2 class="section-title">Latest Stories</h2>
-        <div class="stories-grid">
-            <div class="stories-list" id="storiesContainer">
-                
-                <article class="main-story-card">
-                    <img src="https://i.pinimg.com/1200x/3d/b5/26/3db526c89009c9a6cf461a6d856d284d.jpg" alt="AITAH for sleeping with my MIL" class="story-img"/>
-                    <div class="story-info">
-                        <span class="story-category">Family Confessions</span>
-                        <h2 class="story-title"><a href="aitah-for-sleeping-with-my-mil.html">AITAH for sleeping with my MIL</a></h2>
-                        <p class="story-excerpt">This happened roughly 3 months ago. I (30 m) slept with my MIL while my wife (29 f) was on a roadtrip with her 'friend' (28 f)...</p>
-                        <a href="aitah-for-sleeping-with-my-mil.html" class="read-more-btn">Read Full Story &rarr;</a>
+        <!-- Main Feed -->
+        <div class="main-content">
+            <div id="stories-container">
+                <!-- Story 1 -->
+                <article class="story-card">
+                    <a href="#" class="story-title">I never told anyone about what happened last summer...</a>
+                    <p class="story-excerpt">It all started when I found an old key hidden inside the basement wall. I thought it was just a prank, but then the door actually opened...</p>
+                    <div class="story-meta">
+                        <span>Posted 2 hours ago</span>
+                        <span>Views: 1.2K</span>
                     </div>
                 </article>
 
-                <article class="main-story-card">
-                    <img src="https://i.pinimg.com/1200x/f9/13/75/f91375dd11a914d961c10a5bb51a812d.jpg" alt="I had a fling with my MIL for 8 days" class="story-img"/>
-                    <div class="story-info">
-                        <span class="story-category">Family Confessions</span>
-                        <h2 class="story-title"><a href="fling-with-my-mil.html">I had a fling with my MIL for 8 days</a></h2>
-                        <p class="story-excerpt">Honestly, I have never been able to tell anyone I know about this, and I want to get it off my chest...</p>
-                        <a href="fling-with-my-mil.html" class="read-more-btn">Read Full Story &rarr;</a>
+                <!-- Story 2 -->
+                <article class="story-card">
+                    <a href="#" class="story-title">My secret double life is finally catching up to me</a>
+                    <p class="story-excerpt">For three years, nobody in my office knew about my secondary online venture. But yesterday, my manager walked right into my setup...</p>
+                    <div class="story-meta">
+                        <span>Posted 5 hours ago</span>
+                        <span>Views: 3.4K</span>
                     </div>
                 </article>
 
-                <article class="main-story-card">
-                    <img src="https://i.pinimg.com/1200x/40/23/7d/40237d5d1bbc38fa870e13318a22e397.jpg" alt="Showered With My Aunt Story" class="story-img"/>
-                    <div class="story-info">
-                        <span class="story-category">Family Confessions</span>
-                        <h2 class="story-title"><a href="showered-with-my-aunt.html">I (19M) Showered With My Aunt (43F)</a></h2>
-                        <p class="story-excerpt">This wasn't really starting on purpose. Basically since I was a little kid l'd go back to my home Mom's country for vacations...</p>
-                        <a href="showered-with-my-aunt.html" class="read-more-btn">Read Full Story &rarr;</a>
+                <!-- Story 3 -->
+                <article class="story-card">
+                    <a href="#" class="story-title">The text message that changed everything in a second</a>
+                    <p class="story-excerpt">I was sitting at the dinner table when my phone buzzed. A simple unknown number sent a picture that completely shattered my trust...</p>
+                    <div class="story-meta">
+                        <span>Posted 1 day ago</span>
+                        <span>Views: 5.1K</span>
                     </div>
                 </article>
-
-                <article class="main-story-card">
-                    <img src="https://i.pinimg.com/1200x/40/23/7d/40237d5d1bbc38fa870e13318a22e397.jpg" alt="Slept With Mother-in-Law Story" class="story-img"/>
-                    <div class="story-info">
-                        <span class="story-category">Family Confessions</span>
-                        <h2 class="story-title"><a href="slept-with-mother-in-law.html">[No regrets] I slept with my mother-in-law (with permission from her husband and my wife)</a></h2>
-                        <p class="story-excerpt">It's a very long story but I'll try and keep it short. My wife and I are in our early/mid 30's, been swinging for about 2 years now...</p>
-                        <a href="slept-with-mother-in-law.html" class="read-more-btn">Read Full Story &rarr;</a>
-                    </div>
-                </article>
-
-                <article class="main-story-card">
-                    <img src="https://i.pinimg.com/1200x/7a/1d/57/7a1d57b4ebbee84fb53a921a787ef406.jpg" alt="Daughter and Neighbor Affair Story" class="story-img"/>
-                    <div class="story-info">
-                        <span class="story-category">Family Confessions</span>
-                        <h2 class="story-title"><a href="daughter-neighbor-affair.html">My daughter is having an affair with the married neighbor. I told her she needs to move out</a></h2>
-                        <p class="story-excerpt">Last week I caught my daughter(21) leaving our neighbors house early in the morning and confronted her...</p>
-                        <a href="daughter-neighbor-affair.html" class="read-more-btn">Read Full Story &rarr;</a>
-                    </div>
-                </article>
-
-                <article class="main-story-card">
-                    <img src="https://i.pinimg.com/1200x/38/67/46/386746686769588421.jpg" alt="My Mom Likes to Watch Me Cum Story" class="story-img"/>
-                    <div class="story-info">
-                        <span class="story-category">Family Confessions</span>
-                        <h2 class="story-title"><a href="mom-likes-to-watch.html">My mom likes to watch me cum</a></h2>
-                        <p class="story-excerpt">So a little back ground before I tell the story my family has always been reel open to the point we walk around each other...</p>
-                        <a href="mom-likes-to-watch.html" class="read-more-btn">Read Full Story &rarr;</a>
-                    </div>
-                </article>
-
-                <article class="main-story-card">
-                    <img src="https://i.pinimg.com/1200x/59/90/dd/5990ddf37218c3f5a7b6693ae996faad.jpg" alt="Wife Affair House Story" class="story-img"/>
-                    <div class="story-info">
-                        <span class="story-category">Relationship Confessions</span>
-                        <h2 class="story-title"><a href="wife-affair-house.html">I (f29) caught my wife (f27) at the home of the man she had an affair with</a></h2>
-                        <p class="story-excerpt">My wife and I have been together for over 9 years. We were long distance for 7, and have now been married for over 2 years...</p>
-                        <a href="wife-affair-house.html" class="read-more-btn">Read Full Story &rarr;</a>
-                    </div>
-                </article>
-
-                <article class="main-story-card">
-                    <img src="https://i.pinimg.com/1200x/ca/61/67/ca616778f06f27ffda220c602e59d772.jpg" alt="Cheating on Pregnant Wife Story" class="story-img"/>
-                    <div class="story-info">
-                        <span class="story-category">Relationship Confessions</span>
-                        <h2 class="story-title"><a href="cheating-on-pregnant-wife.html">Cheating on pregnant wife with colleague and can’t stop thinking about new fling</a></h2>
-                        <p class="story-excerpt">tl;dr I’m asking for advice on what to do as I’m falling out of love with my wife whose 6 months pregnant...</p>
-                        <a href="cheating-on-pregnant-wife.html" class="read-more-btn">Read Full Story &rarr;</a>
-                    </div>
-                </article>
-
-                <article class="main-story-card">
-                    <img src="https://i.pinimg.com/1200x/e6/05/64/e6056440623cbfb9eed5b17794bfd296.jpg" alt="Bf Slept With Girls Story" class="story-img"/>
-                    <div class="story-info">
-                        <span class="story-category">Relationship Confessions</span>
-                        <h2 class="story-title"><a href="bf-slept-with-4-girls.html">I found out my bf slept with 4 girls in the talking stage, despite telling me we were exclusive</a></h2>
-                        <p class="story-excerpt">We were seeing each other and I was over his house all the time. Now I know why his behavior was so weird at first...</p>
-                        <a href="bf-slept-with-4-girls.html" class="read-more-btn">Read Full Story &rarr;</a>
-                    </div>
-                </article>
-
-                <article class="main-story-card">
-                    <img src="https://i.pinimg.com/1200x/0b/15/d5/0b15d5f64770c9a2f40c65c9e07ef837.jpg" alt="Affair Pregnancy Story" class="story-img"/>
-                    <div class="story-info">
-                        <span class="story-category">Secret Confessions</span>
-                        <h2 class="story-title"><a href="having-affair-and-pregnant.html">I am having an affair and now I am pregnant</a></h2>
-                        <p class="story-excerpt">I already know I am a terrible, irresponsible, selfish, cheating girl, so please do not comment hate - I need advice...</p>
-                        <a href="having-affair-and-pregnant.html" class="read-more-btn">Read Full Story &rarr;</a>
-                    </div>
-                </article>
-
-                <article class="main-story-card">
-                    <img src="https://i.pinimg.com/1200x/05/05/68/0505689656411c9f2614d1080a5dcf1b.jpg" alt="Neighbor Affair Story" class="story-img"/>
-                    <div class="story-info">
-                        <span class="story-category">Relationship Confessions</span>
-                        <h2 class="story-title"><a href="pregnant-neighbor-affair.html">I’m pregnant, married, and having an affair with my neighbor</a></h2>
-                        <p class="story-excerpt">I’m a stay at home mom to a 3 year old, and I’m 28 weeks pregnant with my second baby. My husband and I have been married for 4 years...</p>
-                        <a href="pregnant-neighbor-affair.html" class="read-more-btn">Read Full Story &rarr;</a>
-                    </div>
-                </article>
-
-                <article class="main-story-card">
-                    <img src="https://i.pinimg.com/1200x/5e/3b/f3/5e3bf30c64eeff194bf74ed2c5b66b4f.jpg" alt="Mom Story" class="story-img"/>
-                    <div class="story-info">
-                        <span class="story-category">Family Confessions</span>
-                        <h2 class="story-title"><a href="mom-likes-to-watch-me-cum.html">My mom likes to watch me cum</a></h2>
-                        <p class="story-excerpt">So a little back ground before I tell the story my family has always been reel open to the point we walk around each other practically naked...</p>
-                        <a href="mom-likes-to-watch-me-cum.html" class="read-more-btn">Read Full Story &rarr;</a>
-                    </div>
-                </article>
-
-                <article class="main-story-card">
-                    <img src="https://i.pinimg.com/originals/53/2a/7c/532a7cbb432d6ef09db28a10a5829337.gif" alt="Uncle in law Story" class="story-img"/>
-                    <div class="story-info">
-                        <span class="story-category">Family Confessions</span>
-                        <h2 class="story-title"><a href="uncle-in-law-story.html">My uncle in law touched me and tried to sleep with me</a></h2>
-                        <p class="story-excerpt">My husband and I have been together for 12 years, since I was 16 years old. His aunt and uncle helped raise him and are like a second set of parents...</p>
-                        <a href="uncle-in-law-story.html" class="read-more-btn">Read Full Story &rarr;</a>
-                    </div>
-                </article>
-
-                <article class="main-story-card">
-                    <img src="https://i.pinimg.com/originals/e2/f3/0e/e2f30ee336e874a50ee55d6e4aac27af.gif" alt="Shower with my Mom Story" class="story-img"/>
-                    <div class="story-info">
-                        <span class="story-category">Family Confessions</span>
-                        <h2 class="story-title"><a href="shower-with-my-mom-story.html">An Unexpected Situation During a Family Shower</a></h2>
-                        <p class="story-excerpt">I'm still shaking as I'm writing this.. I'm going to recount what happened as best as I can. I'm your average 20 year old guy, living with my Mom and Dad...</p>
-                        <a href="shower-with-my-mom-story.html" class="read-more-btn">Read Full Story &rarr;</a>
-                    </div>
-                </article>
-
-                <article class="main-story-card">
-                    <img src="https://i.pinimg.com/originals/e2/f3/0e/e2f30ee336e874a50ee55d6e4aac27af.gif" alt="Drunk Aunt Story" class="story-img"/>
-                    <div class="story-info">
-                        <span class="story-category">Family Confessions</span>
-                        <h2 class="story-title"><a href="drunk-aunt-story.html">My Drunk Aunt</a></h2>
-                        <p class="story-excerpt">To start off i am (M18) and my Aunt is (F43). A few days ago we had a birthday party for my cousin and it was at my Aunts house...</p>
-                        <a href="drunk-aunt-story.html" class="read-more-btn">Read Full Story &rarr;</a>
-                    </div>
-                </article>
-
-                <article class="main-story-card">
-                    <img src="https://i.pinimg.com/originals/b1/aa/ef/b1aaef3af4ffa5e16acfb028010bcf39.gif" alt="Aunt Encounter Story" class="story-img"/>
-                    <div class="story-info">
-                        <span class="story-category">Family Confessions</span>
-                        <h2 class="story-title"><a href="aunt-encounter-story.html">I Had an Unexpected Encounter With My Aunt That Crossed Personal Boundaries</a></h2>
-                        <p class="story-excerpt">My aunt and i decided to extend our spring break to this week as well, seeing as the disaster that was monday-wednesday...</p>
-                        <a href="aunt-encounter-story.html" class="read-more-btn">Read Full Story &rarr;</a>
-                    </div>
-                </article>
-
-                <article class="main-story-card">
-                    <img src="https://i.pinimg.com/736x/3d/f9/b9/3df9b9bca70b54198d68e9414ee05037.jpg" alt="MIL Embarrassing Situation" class="story-img"/>
-                    <div class="story-info">
-                        <span class="story-category">Family Confessions</span>
-                        <h2 class="story-title"><a href="mil-embarrassing-situation.html">My MIL Saw Me in an Embarrassing Situation</a></h2>
-                        <p class="story-excerpt">So today was just like any other morning except being off from work, get up, wash up, brush teeth get dressed get some coffee, then hit the gym...</p>
-                        <a href="mil-embarrassing-situation.html" class="read-more-btn">Read Full Story &rarr;</a>
-                    </div>
-                </article>
-
-                <article class="main-story-card">
-                    <img src="https://i.pinimg.com/originals/5c/7f/04/5c7f0403c80071743f9362d3e12b4814.gif" alt="MIL Hot Tub Story" class="story-img"/>
-                    <div class="story-info">
-                        <span class="story-category">Family Confessions</span>
-                        <h2 class="story-title"><a href="mil-hot-tub-story.html">An Unexpected Encounter With My MIL Left Me Feeling Awkward</a></h2>
-                        <p class="story-excerpt">So a few years ago I (M45) wife (41) were visiting Mil (65) for a week during the summer. Mil lives in the country and has a huge hot tub out on the deck...</p>
-                        <a href="mil-hot-tub-story.html" class="read-more-btn">Read Full Story &rarr;</a>
-                    </div>
-                </article>
-
-                <article class="main-story-card">
-                    <img src="https://i.pinimg.com/originals/83/ae/ec/83aeecb07cb1561d16ae42089774878b.gif" alt="Mother in Law Story" class="story-img"/>
-                    <div class="story-info">
-                        <span class="story-category">Family Confessions</span>
-                        <h2 class="story-title"><a href="mother-in-law-story.html">I Let My Mother-in-Law See Me in a Private Moment, and Things Got Uncomfortable</a></h2>
-                        <p class="story-excerpt">OK so this might be a fairly long and tame story, but I (m35) have had an urge to be 'accidentally' seen naked for a while now, and with my wife's (f34) mother (f60) frequently coming to our house...</p>
-                        <a href="mother-in-law-story.html" class="read-more-btn">Read Full Story &rarr;</a>
-                    </div>
-                </article>
-
-                <article class="main-story-card">
-                    <img src="https://i.pinimg.com/originals/d6/33/2a/d6332a848bf57de662405a635ee2b8dc.gif" alt="Mother in Law Story" class="story-img">
-                    <div class="story-info">
-                        <span class="story-category">Family Confessions</span>
-                        <h2 class="story-title"><a href="mother-in-law-story.html">I Accidentally Witnessed Something Private Involving My Mother-in-Law</a></h2>
-                        <p class="story-excerpt">A few weeks ago, my wife and I stayed at a bungalow resort for a few days together with her family in law...</p>
-                        <a href="mother-in-law-story.html" class="read-more-btn">Read Full Story &rarr;</a>
-                    </div>
-                </article>
-
-                <article class="main-story-card">
-                    <img src="https://i.pinimg.com/736x/2b/a6/cf/2ba6cf460bcc855544a608ec758a68e4.jpg" alt="Family Dilemma" class="story-img">
-                    <div class="story-info">
-                        <span class="story-category">Family Confessions</span>
-                        <h2 class="story-title"><a href="family-dilemma.html">A Private Moment Turned Into an Unexpected Family Dilemma</a></h2>
-                        <p class="story-excerpt">I've been fantasizing about my future Son-in-law after I accidentally saw him naked in the shower...</p>
-                        <a href="family-dilemma.html" class="read-more-btn">Read Full Story &rarr;</a>
-                    </div>
-                </article>
-
-                <article class="main-story-card">
-                    <img src="https://i.pinimg.com/736x/e3/1a/1d/e31a1d707cf992b0eae2b2d9ed6bb795.jpg" alt="Rekindled Love" class="story-img">
-                    <div class="story-info">
-                        <span class="story-category">Relationship Confessions</span>
-                        <h2 class="story-title"><a href="husband-rekindled-love.html">My husband and I made love for the first time in years</a></h2>
-                        <p class="story-excerpt">I (48f) will have been married to my husband (49m) for 30 years in March. Four kids later...</p>
-                        <a href="husband-rekindled-love.html" class="read-more-btn">Read Full Story &rarr;</a>
-                    </div>
-                </article>
-
-                <article class="main-story-card">
-                    <img src="https://i.pinimg.com/originals/e7/09/8e/e7098e0fdc4e59e4403a59a51e568129.gif" alt="Two days ago wife cheated story image" class="story-img">
-                    <div class="story-info">
-                        <span class="story-category">Heartbreaking Confessions</span>
-                        <h2 class="story-title"><a href="two-days-ago-wife-cheated.html">Two days ago, my Wife cheated on me</a></h2>
-                        <p class="story-excerpt">I wanted to write this sooner than I expected, but only got up the courage now. I (30, M) married my wife about 5 years ago...</p>
-                        <a href="two-days-ago-wife-cheated.html" class="read-more-btn">Read Full Story &rarr;</a>
-                    </div>
-                </article>
-
             </div>
 
-            <aside class="sidebar">
-                <div class="sidebar-card">
-                    <h3>Popular Stories</h3>
-                    <ul class="sidebar-list">
-                        <li><a href="mother-in-law-story.html">I Accidentally Witnessed Something Private Involving My Mother-in-Law</a></li>
-                        <li><a href="family-dilemma.html">A Private Moment Turned Into an Unexpected Family Dilemma</a></li>
-                        <li><a href="husband-rekindled-love.html">My husband and I made love for the first time in years</a></li>
-                        <li><a href="two-days-ago-wife-cheated.html">Two days ago, my Wife cheated on me</a></li>
-                    </ul>
-                </div>
-            </aside>
+            <!-- Pagination -->
+            <div class="pagination">
+                <button class="page-btn active" onclick="changePage(1)">1</button>
+                <button class="page-btn" onclick="changePage(2)">2</button>
+                <button class="page-btn" onclick="changePage(3)">3</button>
+            </div>
         </div>
 
-        <!-- Pagination Controls -->
-        <div class="pagination" id="paginationControls">
-            <button id="prevBtn" onclick="changePage(-1)">Previous</button>
-            <span id="pageInfo">Page 1 of 1</span>
-            <button id="nextBtn" onclick="changePage(1)">Next</button>
-        </div>
+        <!-- Sidebar -->
+        <aside>
+            <div class="widget">
+                <h3 class="widget-title">About Confessions</h3>
+                <p style="font-size: 14px; color: #666;">A safe space to share anonymous stories, real-life drama, and secret confessions from around the web.</p>
+            </div>
+            <div class="widget">
+                <h3 class="widget-title">Trending Tags</h3>
+                <p style="font-size: 14px; color: var(--primary-color);">#Secrets #Drama #Confessions #TrueStory</p>
+            </div>
+        </aside>
     </div>
 
-    <footer>
-        <p>&copy; 2026 My Confession. All rights reserved.</p>
-        <div class="footer-links">
-            <a href="about.html">About Us</a>
-            <a href="privacy-policy.html">Privacy Policy</a>
-            <a href="contact.html">Contact Us</a>
-        </div>
-    </footer>
-
-    <!-- Automatic Pagination Script -->
     <script>
-        const itemsPerPage = 6; // Ek page par kitni stories dikhani hain, aap yahan change kar sakti hain
-        let currentPage = 1;
-        const container = document.getElementById('storiesContainer');
-        const cards = Array.from(container.getElementsByClassName('main-story-card'));
-        const totalPages = Math.ceil(cards.length / itemsPerPage);
-
-        function showPage(page) {
-            currentPage = page;
-            const start = (page - 1) * itemsPerPage;
-            const end = start + itemsPerPage;
-
-            cards.forEach((card, index) => {
-                card.style.display = (index >= start && index < end) ? 'flex' : 'none';
-            });
-
-            document.getElementById('pageInfo').innerText = `Page ${currentPage} of ${totalPages || 1}`;
-            document.getElementById('prevBtn').disabled = currentPage === 1;
-            document.getElementById('nextBtn').disabled = currentPage === totalPages || totalPages === 0;
+        function changePage(pageNumber) {
+            // Remove active class from all buttons
+            const buttons = document.querySelectorAll('.page-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            
+            // Add active class to clicked button
+            event.target.classList.add('active');
+            
+            // Yahan aap AJAX ya page routing logic add kar sakte hain naye posts load karne ke liye
+            console.log("Switched to page: " + pageNumber);
         }
-
-        function changePage(direction) {
-            const newPage = currentPage + direction;
-            if (newPage >= 1 && newPage <= totalPages) {
-                showPage(newPage);
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            }
-        }
-
-        // Initialize pagination on load
-        showPage(1);
     </script>
+
 </body>
 </html>
