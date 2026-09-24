@@ -3,295 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SPIEL - Professional Magazine</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Found my wife cheating on me last night - Confessions</title>
+    
     <style>
         :root {
-            --bg-color: #ffffff;
-            --text-color: #111111;
-            --muted-color: #666666;
-            --border-color: #e0e0e0;
-            --header-bg: #000000;
+            --primary-color: #111;
+            --accent-color: #d93838;
+            --bg-color: #f9f9f9;
+            --card-bg: #fff;
+            --text-color: #333;
+            --meta-color: #777;
         }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
-        }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.5;
-        }
-
-        /* Header Styles */
-        header {
-            background-color: var(--header-bg);
-            color: #ffffff;
-            padding: 20px 40px;
-        }
-
-        .header-top {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 25px;
-        }
-
-        .social-icons {
-            display: flex;
-            gap: 15px;
-            font-size: 14px;
-            color: #aaa;
-        }
-
-        .search-box {
-            background: #ffffff;
-            padding: 6px 12px;
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-            width: 220px;
-        }
-
-        .search-box input {
-            border: none;
-            outline: none;
-            width: 100%;
-            font-size: 13px;
-        }
-
-        .logo-container {
-            text-align: center;
-            margin: 20px 0;
-        }
-
-        .logo {
-            font-size: 42px;
-            font-weight: 800;
-            letter-spacing: 4px;
-            color: #ffffff;
-            text-decoration: none;
-        }
-
-        nav ul {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-            gap: 30px;
-            border-top: 1px solid #222;
-            padding-top: 15px;
-        }
-
-        nav ul li a {
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 500;
-            transition: color 0.2s;
-        }
-
-        nav ul li a:hover {
-            color: #aaa;
-        }
-
-        /* Main Container */
-        .container {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-
-        .section-title {
-            font-size: 14px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            border-bottom: 2px solid var(--text-color);
-            padding-bottom: 8px;
-            margin-bottom: 25px;
-        }
-
-        /* Latest Section Grid */
-        .latest-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
-            gap: 25px;
-            margin-bottom: 50px;
-        }
-
-        .article-card img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            border-radius: 4px;
-            margin-bottom: 12px;
-        }
-
-        .latest-grid .article-card:first-child img {
-            height: 380px;
-        }
-
-        .article-category {
-            font-size: 11px;
-            color: var(--muted-color);
-            text-transform: uppercase;
-            font-weight: 600;
-            margin-bottom: 6px;
-        }
-
-        .article-title {
-            font-size: 16px;
-            font-weight: 700;
-            color: var(--text-color);
-            text-decoration: none;
-            display: block;
-            margin-bottom: 8px;
-            line-height: 1.4;
-        }
-
-        .latest-grid .article-card:first-child .article-title {
-            font-size: 22px;
-        }
-
-        .article-title:hover {
-            text-decoration: underline;
-        }
-
-        .article-author {
-            font-size: 12px;
-            color: var(--muted-color);
-        }
-
-        /* Trending Section Grid */
-        .trending-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-        }
-
-        .trending-grid .article-card img {
-            height: 160px;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 900px) {
-            .latest-grid {
-                grid-template-columns: 1fr;
-            }
-            .latest-grid .article-card:first-child img {
-                height: 250px;
-            }
-            .trending-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .header-top {
-                flex-direction: column;
-                gap: 15px;
-            }
-        }
-
-        @media (max-width: 600px) {
-            .trending-grid {
-                grid-template-columns: 1fr;
-            }
-            nav ul {
-                flex-wrap: wrap;
-                gap: 15px;
-            }
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: var(--bg-color); color: var(--text-color); line-height: 1.6; }
+        header { background-color: var(--primary-color); color: #fff; padding: 20px 0; text-align: center; border-bottom: 4px solid var(--accent-color); }
+        header h1 { font-size: 2.5rem; letter-spacing: 2px; text-transform: uppercase; }
+        nav { background-color: #222; padding: 10px 0; text-align: center; }
+        nav a { color: #fff; text-decoration: none; margin: 0 15px; font-size: 0.95rem; font-weight: 600; text-transform: uppercase; }
+        nav a:hover { color: var(--accent-color); }
+        .container { max-width: 900px; margin: 30px auto; padding: 0 20px; }
+        .article-card { background: var(--card-bg); padding: 40px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .article-category { color: var(--accent-color); font-weight: bold; font-size: 0.9rem; text-transform: uppercase; margin-bottom: 10px; display: inline-block; }
+        .article-title { font-size: 2.2rem; color: var(--primary-color); margin-bottom: 15px; line-height: 1.3; }
+        .article-meta { color: var(--meta-color); font-size: 0.9rem; margin-bottom: 25px; border-bottom: 1px solid #eee; padding-bottom: 15px; }
+        .article-image { width: 100%; max-height: 500px; object-fit: cover; border-radius: 6px; margin-bottom: 30px; }
+        .ad-container { margin: 30px 0; text-align: center; overflow-x: auto; }
+        .article-content p { margin-bottom: 20px; font-size: 1.1rem; color: #444; }
+        footer { background-color: var(--primary-color); color: #fff; text-align: center; padding: 20px 0; margin-top: 50px; font-size: 0.9rem; }
+        @media (max-width: 768px) { .article-title { font-size: 1.6rem; } .article-card { padding: 20px; } }
     </style>
 </head>
 <body>
 
-    <!-- Header Section -->
     <header>
-        <div class="header-top">
-            <div class="social-icons">
-                <span>f</span> <span>ig</span> <span>tk</span> <span>yt</span>
-            </div>
-            <div class="search-box">
-                <input type="text" placeholder="Search...">
-            </div>
-        </div>
-        <div class="logo-container">
-            <a href="#" class="logo">SPIEL</a>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#">News</a></li>
-                <li><a href="#">Reviews</a></li>
-                <li><a href="#">Guides</a></li>
-                <li><a href="#">Trending</a></li>
-                <li><a href="#">Platform</a></li>
-            </ul>
-        </nav>
+        <h1>Confessions</h1>
     </header>
 
-    <!-- Content Section -->
+    <nav>
+        <a href="/">Home</a>
+        <a href="#">Secret Stories</a>
+        <a href="#">Trending</a>
+        <a href="#">Categories</a>
+        <a href="#">Contact</a>
+    </nav>
+
     <div class="container">
-        
-        <!-- LATEST SECTION -->
-        <h2 class="section-title">Latest</h2>
-        <div class="latest-grid">
-            <!-- Big Featured Post -->
-            <article class="article-card">
-                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80" alt="Post Image">
-                <div class="article-category">News, Reviews</div>
-                <a href="#" class="article-title">Slow Burn: A Dive into the Open-World RPG's Vivid Universe</a>
-                <div class="article-author">Joan Smith</div>
-            </article>
+        <article class="article-card">
+            <span class="article-category">Heartbreaking Confessions</span>
+            <h1 class="article-title">Found my wife cheating on me last night</h1>
+            <div class="article-meta">Published on September 22, 2026 • By Confession Hub</div>
 
-            <!-- Small Post 1 -->
-            <article class="article-card">
-                <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=500&q=80" alt="Post Image">
-                <div class="article-category">Guides</div>
-                <a href="#" class="article-title">How to Defeat the Secret Boss in Fountain</a>
-                <div class="article-author">Joan Smith</div>
-            </article>
+            <img src="https://i.pinimg.com/originals/4d/8d/a6/4d8da670bf633d16a0acf7960b46d1f0.gif" alt="Story GIF Image" class="article-image">
 
-            <!-- Small Post 2 -->
-            <article class="article-card">
-                <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=500&q=80" alt="Post Image">
-                <div class="article-category">News</div>
-                <a href="#" class="article-title">Tiger's Den Claws Out in the Ultimate Fighting Arena</a>
-                <div class="article-author">Joan Smith</div>
-            </article>
-        </div>
-
-        <!-- TRENDING SECTION -->
-        <h2 class="section-title">Trending</h2>
-        <div class="trending-grid">
-            <article class="article-card">
-                <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=500&q=80" alt="Trending 1">
-                <div class="article-category">Features</div>
-                <a href="#" class="article-title">Not Enough - The Chase for More in the City</a>
-                <div class="article-author">Joan Smith</div>
-            </article>
-            <article class="article-card">
-                <img src="https://images.unsplash.com/photo-1612287233202-b51e3ed617c5?auto=format&fit=crop&w=500&q=80" alt="Trending 2">
-                <div class="article-category">News</div>
-                <a href="#" class="article-title">Legend of Lask: From Gaming to Big Screen</a>
-                <div class="article-author">Joan Smith</div>
-            </article>
-            <article class="article-card">
-                <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=500&q=80" alt="Trending 3">
-                <div class="article-category">Guides</div>
-                <a href="#" class="article-title">Gift Guide: Perfect Picks for Enthusiasts</a>
-                <div class="article-author">Joan Smith</div>
-            </article>
-            <article class="article-card">
-                <img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=500&q=80" alt="Trending 4">
-                <div class="article-category">Reviews</div>
-                <a href="#" class="article-title">Review: Masked Truth - A Tale of Fire & Mystery</a>
-                <div class="article-author">Joan Smith</div>
-            </article>
-        </div>
-
+<div class="article-content">
+    <p>I met my wife in 2011, I was DJ-ing a social event at school and playing some 90s rocks. I was playing Third Eye Blind and my wife liked the song that came on. She talked to me, we bonded over our mutual love of the band, yadda yadda, we started started dating.</p>
+    <p>Fast forward to 2013, we got engaged and we took a trip and to celebrate. We have this memory we talk about a lot of listening to the whole Third Eye Blind catalog and singing along to all the songs together. We got married that year.</p>
+    
+    <!-- Ad inside story (Zone: 11877536) -->
+    <div class="ad-container">
+        <script>(function(s){s.dataset.zone='11877536',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
     </div>
+
+    <p>Last night we were supposed to see them for the 10th time. If you're the math in your head, we've been married for 10 years as well. That's coming up in November, so I had this whole thing planned where we would go see the show, stay over at a hotel, have a romantic night.</p>
+    <p>I get home from work on Friday, my wife is getting ready. She looks amazing. I see a text come on her phone. You know how the rest of the story goes I don’t even want to type it. She met some guy the night before when I was away for work.</p>
+    
+    <!-- Ad inside story (Vignette script) -->
+    <div class="ad-container">
+        <script>(function(s){s.dataset.zone='11877528',s.src='https://n6wxm.com/vignette.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+    </div>
+
+    <p>At this point, I can't forgive her. I forgave her once and here we are. If I forgive her again, it's just a matter of when, not if, I'm back in this same scenario.</p>
+
+    <!-- End of story ad -->
+    <div class="ad-container" style="margin-top: 40px;">
+        <script src="https://5gvci.com/act/files/tag.min.js?z=11877525" data-cfasync="false" async></script>
+    </div>
+
+</div>
+        </article>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Confession Hub. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
