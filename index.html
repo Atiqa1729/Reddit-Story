@@ -3,151 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Confessions - Latest Stories</title>
+    <title>Welcome to My Site</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #ff4757;
-            --bg-color: #f8f9fa;
-            --text-color: #333;
-            --card-bg: #fff;
-            --border-color: #e1e8ed;
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent-color: #38bdf8;
+            --border-color: #334155;
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', sans-serif;
         }
 
         body {
             background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
 
         header {
-            background: var(--card-bg);
-            padding: 20px 40px;
+            background-color: var(--card-bg);
             border-bottom: 1px solid var(--border-color);
+            padding: 20px 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 100;
         }
 
         .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: var(--primary-color);
-            text-decoration: none;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 30px auto;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 30px;
-        }
-
-        .main-content {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .story-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 20px;
-            transition: transform 0.2s ease;
-        }
-
-        .story-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-        }
-
-        .story-title {
             font-size: 20px;
-            margin-bottom: 10px;
-            color: #111;
+            font-weight: 700;
+            color: var(--accent-color);
             text-decoration: none;
-            display: block;
         }
 
-        .story-title:hover {
-            color: var(--primary-color);
-        }
-
-        .story-excerpt {
-            color: #666;
-            margin-bottom: 15px;
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin-left: 20px;
             font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s;
         }
 
-        .story-meta {
-            font-size: 12px;
-            color: #999;
-            display: flex;
-            justify-content: space-between;
+        nav a:hover {
+            color: var(--accent-color);
         }
 
-        sidebar {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
+        main {
+            flex: 1;
+            max-width: 900px;
+            width: 100%;
+            margin: 40px auto;
+            padding: 0 20px;
         }
 
-        .widget {
+        .hero-section {
             background: var(--card-bg);
             border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 20px;
+            border-radius: 12px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 30px;
         }
 
-        .widget-title {
-            font-size: 16px;
-            font-weight: bold;
+        .hero-section h1 {
+            font-size: 32px;
             margin-bottom: 15px;
-            border-bottom: 2px solid var(--primary-color);
-            padding-bottom: 5px;
-            display: inline-block;
+            color: var(--text-main);
         }
 
-        .pagination {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 20px;
+        .hero-section p {
+            color: var(--text-muted);
+            font-size: 16px;
+            margin-bottom: 25px;
         }
 
-        .page-btn {
-            padding: 8px 14px;
-            border: 1px solid var(--border-color);
-            background: var(--card-bg);
-            cursor: pointer;
-            border-radius: 4px;
+        .btn {
+            background-color: var(--accent-color);
+            color: #0f172a;
+            padding: 10px 24px;
+            border-radius: 6px;
+            text-decoration: none;
             font-weight: 600;
+            display: inline-block;
+            transition: opacity 0.2s;
         }
 
-        .page-btn.active, .page-btn:hover {
-            background: var(--primary-color);
-            color: white;
-            border-color: var(--primary-color);
+        .btn:hover {
+            opacity: 0.9;
         }
 
-        @media (max-width: 768px) {
-            .container {
-                grid-template-columns: 1fr;
-            }
+        .content-box {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 30px;
+            min-height: 200px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 13px;
+            background-color: var(--card-bg);
+        }
+
+        @media (max-width: 600px) {
             header {
                 padding: 15px 20px;
+            }
+            .hero-section {
+                padding: 25px 20px;
             }
         }
     </style>
@@ -155,81 +133,30 @@
 <body>
 
     <header>
-        <a href="#" class="logo">My Confessions</a>
+        <a href="#" class="logo">BrandName</a>
         <nav>
-            <a href="#" style="text-decoration: none; color: var(--text-color); font-weight: 600;">Home</a>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
         </nav>
     </header>
 
-    <div class="container">
-        <!-- Main Feed -->
-        <div class="main-content">
-            <div id="stories-container">
-                <!-- Story 1 -->
-                <article class="story-card">
-                    <a href="#" class="story-title">I never told anyone about what happened last summer...</a>
-                    <p class="story-excerpt">It all started when I found an old key hidden inside the basement wall. I thought it was just a prank, but then the door actually opened...</p>
-                    <div class="story-meta">
-                        <span>Posted 2 hours ago</span>
-                        <span>Views: 1.2K</span>
-                    </div>
-                </article>
+    <main>
+        <section class="hero-section">
+            <h1>Welcome to Your New Website</h1>
+            <p>This is a clean, modern, and empty canvas template ready for your custom content and scripts.</p>
+            <a href="#" class="btn">Get Started</a>
+        </section>
 
-                <!-- Story 2 -->
-                <article class="story-card">
-                    <a href="#" class="story-title">My secret double life is finally catching up to me</a>
-                    <p class="story-excerpt">For three years, nobody in my office knew about my secondary online venture. But yesterday, my manager walked right into my setup...</p>
-                    <div class="story-meta">
-                        <span>Posted 5 hours ago</span>
-                        <span>Views: 3.4K</span>
-                    </div>
-                </article>
-
-                <!-- Story 3 -->
-                <article class="story-card">
-                    <a href="#" class="story-title">The text message that changed everything in a second</a>
-                    <p class="story-excerpt">I was sitting at the dinner table when my phone buzzed. A simple unknown number sent a picture that completely shattered my trust...</p>
-                    <div class="story-meta">
-                        <span>Posted 1 day ago</span>
-                        <span>Views: 5.1K</span>
-                    </div>
-                </article>
-            </div>
-
-            <!-- Pagination -->
-            <div class="pagination">
-                <button class="page-btn active" onclick="changePage(1)">1</button>
-                <button class="page-btn" onclick="changePage(2)">2</button>
-                <button class="page-btn" onclick="changePage(3)">3</button>
-            </div>
+        <div class="content-box">
+            <!-- Yahan aap apna dynamic content, loop, ya posts insert kar sakte hain -->
+            <p style="color: var(--text-muted); text-align: center; margin-top: 50px;">Content container is empty. Add your data here.</p>
         </div>
+    </main>
 
-        <!-- Sidebar -->
-        <aside>
-            <div class="widget">
-                <h3 class="widget-title">About Confessions</h3>
-                <p style="font-size: 14px; color: #666;">A safe space to share anonymous stories, real-life drama, and secret confessions from around the web.</p>
-            </div>
-            <div class="widget">
-                <h3 class="widget-title">Trending Tags</h3>
-                <p style="font-size: 14px; color: var(--primary-color);">#Secrets #Drama #Confessions #TrueStory</p>
-            </div>
-        </aside>
-    </div>
-
-    <script>
-        function changePage(pageNumber) {
-            // Remove active class from all buttons
-            const buttons = document.querySelectorAll('.page-btn');
-            buttons.forEach(btn => btn.classList.remove('active'));
-            
-            // Add active class to clicked button
-            event.target.classList.add('active');
-            
-            // Yahan aap AJAX ya page routing logic add kar sakte hain naye posts load karne ke liye
-            console.log("Switched to page: " + pageNumber);
-        }
-    </script>
+    <footer>
+        <p>&copy; 2026 BrandName. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
