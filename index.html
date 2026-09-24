@@ -3,88 +3,262 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Found my wife cheating on me last night - Confessions</title>
-    
+    <title>My Confessions - Secrets & True Stories</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #111;
-            --accent-color: #d93838;
-            --bg-color: #f9f9f9;
-            --card-bg: #fff;
-            --text-color: #333;
-            --meta-color: #777;
+            --bg-color: #ffffff;
+            --text-color: #111111;
+            --muted-color: #666666;
+            --border-color: #e0e0e0;
+            --header-bg: #000000;
+            --accent-color: #ff4757;
         }
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        body { background-color: var(--bg-color); color: var(--text-color); line-height: 1.6; }
-        header { background-color: var(--primary-color); color: #fff; padding: 20px 0; text-align: center; border-bottom: 4px solid var(--accent-color); }
-        header h1 { font-size: 2.5rem; letter-spacing: 2px; text-transform: uppercase; }
-        nav { background-color: #222; padding: 10px 0; text-align: center; }
-        nav a { color: #fff; text-decoration: none; margin: 0 15px; font-size: 0.95rem; font-weight: 600; text-transform: uppercase; }
-        nav a:hover { color: var(--accent-color); }
-        .container { max-width: 900px; margin: 30px auto; padding: 0 20px; }
-        .article-card { background: var(--card-bg); padding: 40px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        .article-category { color: var(--accent-color); font-weight: bold; font-size: 0.9rem; text-transform: uppercase; margin-bottom: 10px; display: inline-block; }
-        .article-title { font-size: 2.2rem; color: var(--primary-color); margin-bottom: 15px; line-height: 1.3; }
-        .article-meta { color: var(--meta-color); font-size: 0.9rem; margin-bottom: 25px; border-bottom: 1px solid #eee; padding-bottom: 15px; }
-        .article-image { width: 100%; max-height: 500px; object-fit: cover; border-radius: 6px; margin-bottom: 30px; }
-        .ad-container { margin: 30px 0; text-align: center; overflow-x: auto; }
-        .article-content p { margin-bottom: 20px; font-size: 1.1rem; color: #444; }
-        footer { background-color: var(--primary-color); color: #fff; text-align: center; padding: 20px 0; margin-top: 50px; font-size: 0.9rem; }
-        @media (max-width: 768px) { .article-title { font-size: 1.6rem; } .article-card { padding: 20px; } }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: var(--header-bg);
+            color: #ffffff;
+            padding: 20px 40px;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            font-size: 14px;
+            color: #aaa;
+        }
+
+        .search-box {
+            background: #ffffff;
+            padding: 6px 12px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            width: 220px;
+        }
+
+        .search-box input {
+            border: none;
+            outline: none;
+            width: 100%;
+            font-size: 13px;
+        }
+
+        .logo-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .logo {
+            font-size: 36px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 30px;
+            border-top: 1px solid #222;
+            padding-top: 15px;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+            flex: 1;
+            width: 100%;
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-bottom: 2px solid var(--text-color);
+            padding-bottom: 8px;
+            margin-bottom: 25px;
+        }
+
+        /* Empty Posts Area */
+        .posts-wrapper {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        .empty-slot {
+            border: 2px dashed var(--border-color);
+            border-radius: 6px;
+            padding: 40px 20px;
+            text-align: center;
+            color: var(--muted-color);
+            background: #fafafa;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: var(--header-bg);
+            color: #ffffff;
+            padding: 40px 20px 20px;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            border-bottom: 1px solid #222;
+            padding-bottom: 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            font-size: 12px;
+            color: #777;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .posts-wrapper {
+                grid-template-columns: 1fr;
+            }
+            .header-top {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .footer-links {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+        }
     </style>
 </head>
 <body>
 
+    <!-- Header Section -->
     <header>
-        <h1>Confessions</h1>
+        <div class="header-top">
+            <div class="social-icons">
+                <span>Facebook</span> • <span>Instagram</span> • <span>Pinterest</span>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="Search confessions...">
+            </div>
+        </div>
+        <div class="logo-container">
+            <a href="#" class="logo">MY <span>CONFESSIONS</span></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Confessions</a></li>
+                <li><a href="#">Submit Story</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <nav>
-        <a href="/">Home</a>
-        <a href="#">Secret Stories</a>
-        <a href="#">Trending</a>
-        <a href="#">Categories</a>
-        <a href="#">Contact</a>
-    </nav>
-
+    <!-- Content Section (Yahan aap apni posts add karengi) -->
     <div class="container">
-        <article class="article-card">
-            <span class="article-category">Heartbreaking Confessions</span>
-            <h1 class="article-title">Found my wife cheating on me last night</h1>
-            <div class="article-meta">Published on September 22, 2026 • By Confession Hub</div>
-
-            <img src="https://i.pinimg.com/originals/4d/8d/a6/4d8da670bf633d16a0acf7960b46d1f0.gif" alt="Story GIF Image" class="article-image">
-
-<div class="article-content">
-    <p>I met my wife in 2011, I was DJ-ing a social event at school and playing some 90s rocks. I was playing Third Eye Blind and my wife liked the song that came on. She talked to me, we bonded over our mutual love of the band, yadda yadda, we started started dating.</p>
-    <p>Fast forward to 2013, we got engaged and we took a trip and to celebrate. We have this memory we talk about a lot of listening to the whole Third Eye Blind catalog and singing along to all the songs together. We got married that year.</p>
-    
-    <!-- Ad inside story (Zone: 11877536) -->
-    <div class="ad-container">
-        <script>(function(s){s.dataset.zone='11877536',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+        <h2 class="section-title">Latest Confessions</h2>
+        
+        <div class="posts-wrapper">
+            <!-- Jab aap apni posts lagana chahein toh in boxes ki jagah apni HTML articles rakh sakti hain -->
+            <div class="empty-slot">Your Post 1 Will Appear Here</div>
+            <div class="empty-slot">Your Post 2 Will Appear Here</div>
+            <div class="empty-slot">Your Post 3 Will Appear Here</div>
+        </div>
     </div>
 
-    <p>Last night we were supposed to see them for the 10th time. If you're the math in your head, we've been married for 10 years as well. That's coming up in November, so I had this whole thing planned where we would go see the show, stay over at a hotel, have a romantic night.</p>
-    <p>I get home from work on Friday, my wife is getting ready. She looks amazing. I see a text come on her phone. You know how the rest of the story goes I don’t even want to type it. She met some guy the night before when I was away for work.</p>
-    
-    <!-- Ad inside story (Vignette script) -->
-    <div class="ad-container">
-        <script>(function(s){s.dataset.zone='11877528',s.src='https://n6wxm.com/vignette.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
-    </div>
-
-    <p>At this point, I can't forgive her. I forgave her once and here we are. If I forgive her again, it's just a matter of when, not if, I'm back in this same scenario.</p>
-
-    <!-- End of story ad -->
-    <div class="ad-container" style="margin-top: 40px;">
-        <script src="https://5gvci.com/act/files/tag.min.js?z=11877525" data-cfasync="false" async></script>
-    </div>
-
-</div>
-        </article>
-    </div>
-
+    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2026 Confession Hub. All rights reserved.</p>
+        <div class="footer-content">
+            <p style="font-weight: 600; font-size: 16px;">My Confessions</p>
+            <ul class="footer-links">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 My Confessions. All rights reserved.</p>
+        </div>
     </footer>
 
 </body>
