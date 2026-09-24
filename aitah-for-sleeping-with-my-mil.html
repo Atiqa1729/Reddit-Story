@@ -105,11 +105,51 @@
             color: var(--accent-color);
         }
 
-        .container {
-            max-width: 900px;
+        /* Header Ads Container (2 Ads: 90x728) */
+        .header-ads {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* Layout with Sidebar */
+        .page-layout {
+            max-width: 1250px;
             margin: 40px auto;
             padding: 0 20px;
+            display: flex;
+            gap: 30px;
             flex: 1;
+            width: 100%;
+        }
+
+        .main-content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        /* Sidebar Styles */
+        aside {
+            width: 320px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .ad-box {
+            background: #f9f9f9;
+            border: 1px solid var(--border-color);
+            padding: 10px;
+            text-align: center;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
             width: 100%;
         }
 
@@ -118,6 +158,7 @@
             padding: 40px;
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 1px solid var(--border-color);
         }
 
         .article-category {
@@ -164,11 +205,28 @@
             color: #444;
         }
 
+        /* Footer Styles */
         footer {
             background-color: var(--header-bg);
             color: #ffffff;
             padding: 40px 20px 20px;
             margin-top: auto;
+        }
+
+        .footer-ads {
+            max-width: 1100px;
+            margin: 0 auto 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .footer-ads-row {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
         }
 
         .footer-content {
@@ -207,7 +265,13 @@
             color: #777;
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 900px) {
+            .page-layout {
+                flex-direction: column;
+            }
+            aside {
+                width: 100%;
+            }
             .article-title { font-size: 1.6rem; }
             .article-card { padding: 20px; }
             .header-top { flex-direction: column; gap: 15px; }
@@ -239,51 +303,230 @@
                 <li><a href="#">Contact Us</a></li>
             </ul>
         </nav>
+
+        <!-- Header Ads (2 Ads: 90x728) -->
+        <div class="header-ads">
+            <div>
+                <script>
+                  atOptions = {
+                    'key' : '752a995c34b387bdfa57bf0172c22be1',
+                    'format' : 'iframe',
+                    'height' : 90,
+                    'width' : 728,
+                    'params' : {}
+                  };
+                </script>
+                <script src="https://preliminarycultural.com/752a995c34b387bdfa57bf0172c22be1/invoke.js"></script>
+            </div>
+            <div>
+                <script>
+                  atOptions = {
+                    'key' : '752a995c34b387bdfa57bf0172c22be1',
+                    'format' : 'iframe',
+                    'height' : 90,
+                    'width' : 728,
+                    'params' : {}
+                  };
+                </script>
+                <script src="https://preliminarycultural.com/752a995c34b387bdfa57bf0172c22be1/invoke.js"></script>
+            </div>
+        </div>
     </header>
 
-    <div class="container">
-        <article class="article-card">
-            <span class="article-category">Family Drama & Confessions</span>
-            <h1 class="article-title">AITAH for sleeping with my MIL</h1>
-            <div class="article-meta">Published on September 24, 2026 • By Admin</div>
+    <!-- Page Layout with Main Article & Sidebar -->
+    <div class="page-layout">
 
-            <img src="https://i.pinimg.com/1200x/3d/b5/26/3db526c89009c9a6cf461a6d856d284d.jpg" alt="Story Image" class="article-image">
+        <div class="main-content">
+            <div class="container">
+                <article class="article-card">
+                    <span class="article-category">Family Drama & Confessions</span>
+                    <h1 class="article-title">AITAH for sleeping with my MIL</h1>
+                    <div class="article-meta">Published on September 24, 2026 • By Admin</div>
 
-            <div class="article-content">
-                <p>I (30 m) slept with my MIL while my wife (29 f) was on a roadtrip with her 'friend' (28 f). Before this incident, my wife began acting strange and protective of her phone, smiling at any text she received and had gotten a password on it as well, we've never had passwords on our phones. She acted strangely the entire time before the trip and didn't exactly tell me where they were going, now here is my theory, she is sleeping with this 'friend' or was actually going with someone else, my wife is bisexual so I have reason to suspect her and her 'friend'.</p>
-                <p>Naturally I went to my MIL with my concerns, I'm very close to her since my own mother and I don't have the best relationship, she had always filled that role in a way since I first met her which made me naturally gravitate to her motherly love. We talked about her daughter and how she's been acting, that's where she admitted to me that my wife has cheated on multiple past boyfriends, I was furious and worried at the same time, convinced that she was cheating on me on that road trip.</p>
-                
-                <!-- Ad inside story (Zone: 11877536) -->
-                <div class="ad-container">
-                    <script>(function(s){s.dataset.zone='11877536',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
-                </div>
+                    <img src="https://i.pinimg.com/1200x/3d/b5/26/3db526c89009c9a6cf461a6d856d284d.jpg" alt="Story Image" class="article-image">
 
-                <p>My MIL calmed me down and told me that I had nothing to worry about because my wife loves me and only me. I left soon after and tried calling my wife multiple times to ask her about the ex boyfriends she's cheated on but received no answer, I texted her multiple times and still no answer. She didn't call or answer any text until the next day in the afternoon where she insisted that her mother was lying and delusional. So to confirm I went back to my MIL's and talked to her again where she confirmed that she wasn't lying and had proof. I was too angry to see her proof, my MIL didn't have a reason to lie about her own daughter so I instantly believed her.</p>
-                <p>She comforted me and we talked more, eventually it turned into more than just a conversation and comforting. To give context my FIL died in 2019, before our wedding, leaving my MIL alone and depressed so when she came onto me I figured she just hadn't felt the touch of a man in a long time. I was confused and hesitant at first but she assured me it would be ok so I didn't see anything wrong with it at the time, she needed comfort as well and her daughter, my wife, is an only child and always too busy to visit or spend time with her.</p>
-                
-                <!-- Ad inside story (Vignette script) -->
-                <div class="ad-container">
-                    <script>(function(s){s.dataset.zone='11877528',s.src='https://n6wxm.com/vignette.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
-                </div>
+                    <div class="article-content">
+                        <p>I (30 m) slept with my MIL while my wife (29 f) was on a roadtrip with her 'friend' (28 f). Before this incident, my wife began acting strange and protective of her phone, smiling at any text she received and had gotten a password on it as well, we've never had passwords on our phones. She acted strangely the entire time before the trip and didn't exactly tell me where they were going, now here is my theory, she is sleeping with this 'friend' or was actually going with someone else, my wife is bisexual so I have reason to suspect her and her 'friend'.</p>
+                        <p>Naturally I went to my MIL with my concerns, I'm very close to her since my own mother and I don't have the best relationship, she had always filled that role in a way since I first met her which made me naturally gravitate to her motherly love. We talked about her daughter and how she's been acting, that's where she admitted to me that my wife has cheated on multiple past boyfriends, I was furious and worried at the same time, convinced that she was cheating on me on that road trip.</p>
+                        
+                        <!-- Ad 1 inside story (90x728) -->
+                        <div class="ad-container">
+                            <script>
+                              atOptions = {
+                                'key' : '752a995c34b387bdfa57bf0172c22be1',
+                                'format' : 'iframe',
+                                'height' : 90,
+                                'width' : 728,
+                                'params' : {}
+                              };
+                            </script>
+                            <script src="https://preliminarycultural.com/752a995c34b387bdfa57bf0172c22be1/invoke.js"></script>
+                        </div>
 
-                <p>It was suppose to be just one time while my wife was away, she was never going to find out about it and we would just forget it ever happened, but it began happening regularly. My wife's road trip was five days long, throughout the five days my MIL stayed over at our house and we got intimate regularly, at the time I didn't feel bad since my wife had not contacted me since the barrage of calls and texted I sent her and in return I didn't reach out either.</p>
-                <p>My MIL left the night before my wife was suppose to return, but in the morning my wife call for the first time in days and informed me that she wouldn't be back until the next day, so I went over to my MIL's and we slept together one last time.</p>
-                <p>When my wife returned we didn't speak to each other the first day but the second day she showed me pictures and videos she and her 'friend' had taken. In those pictures they were extremely close and overly touchy in my opinion but to avoid an argument I didn't mention how weird it was for two friends to cuddle and hold each other so closely. A few days passed and she finally went to go see her mom, I didn't go because I was busy at work but when she came back she mentioned how my MIL was asking about me and how things were going between my wife and I, which I didn't really pay much attention to until my MIL began sending me explicit pictures.</p>
-                <p>In the beginning I panicked and blocked her for two days, but ultimately unblocked her and just put a password on my phone so my wife wouldn't see any of it, I changed my MIL's name and picture to a friends so my wife wouldn't be suspicious that her mother was texting me so much. My MIL and I began talking regularly again and even began sending explicit pictures to each other, but we never had sex since we never found time. Now here is where I need outsiders advice, I confided in a close friend about what happened, I told him everything and made sure to add my wife's suspicious behavior.</p>
-                <p>He immediately told me I had no right to suspect my wife with no proof but I argued that her suspicious behavior, getting a password, not calling for four days, and the creepy touchy pictures with her 'friend' were proof enough. He didn't agree and instead told me I was in the wrong and a 'freak' for sleeping with my 43 yr MIL, saying she was too old and it wasn't right even though my MIL is a beautiful women and takes care of her body, more than my wife at times.</p>
-                <p>Now he's saying that he'll tell my wife what I've done and that she will surely get a divorce. I begged him not to, I still love my wife and I still want to be with her, he called me an asshole and disgusting before giving me an ultimatum, either I will have to tell her or he will.</p>
-                <p><b>Should I tell my wife? and AITA?</b></p>
+                        <p>My MIL calmed me down and told me that I had nothing to worry about because my wife loves me and only me. I left soon after and tried calling my wife multiple times to ask her about the ex boyfriends she's cheated on but received no answer, I texted her multiple times and still no answer. She didn't call or answer any text until the next day in the afternoon where she insisted that her mother was lying and delusional. So to confirm I went back to my MIL's and talked to her again where she confirmed that she wasn't lying and had proof. I was too angry to see her proof, my MIL didn't have a reason to lie about her own daughter so I instantly believed her.</p>
+                        <p>She comforted me and we talked more, eventually it turned into more than just a conversation and comforting. To give context my FIL died in 2019, before our wedding, leaving my MIL alone and depressed so when she came onto me I figured she just hadn't felt the touch of a man in a long time. I was confused and hesitant at first but she assured me it would be ok so I didn't see anything wrong with it at the time, she needed comfort as well and her daughter, my wife, is an only child and always too busy to visit or spend time with her.</p>
+                        
+                        <!-- Ad 2 inside story (90x728) -->
+                        <div class="ad-container">
+                            <script>
+                              atOptions = {
+                                'key' : '752a995c34b387bdfa57bf0172c22be1',
+                                'format' : 'iframe',
+                                'height' : 90,
+                                'width' : 728,
+                                'params' : {}
+                              };
+                            </script>
+                            <script src="https://preliminarycultural.com/752a995c34b387bdfa57bf0172c22be1/invoke.js"></script>
+                        </div>
 
-                <!-- End of story ad -->
-                <div class="ad-container" style="margin-top: 40px;">
-                    <script src="https://5gvci.com/act/files/tag.min.js?z=11877525" data-cfasync="false" async></script>
-                </div>
-
+                        <p>It was suppose to be just one time while my wife was away, she was never going to find out about it and we would just forget it ever happened, but it began happening regularly. My wife's road trip was five days long, throughout the five days my MIL stayed over at our house and we got intimate regularly, at the time I didn't feel bad since my wife had not contacted me since the barrage of calls and texted I sent her and in return I didn't reach out either.</p>
+                        <p>My MIL left the night before my wife was suppose to return, but in the morning my wife call for the first time in days and informed me that she wouldn't be back until the next day, so I went over to my MIL's and we slept together one last time.</p>
+                        <p>When my wife returned we didn't speak to each other the first day but the second day she showed me pictures and videos she and her 'friend' had taken. In those pictures they were extremely close and overly touchy in my opinion but to avoid an argument I didn't mention how weird it was for two friends to cuddle and hold each other so closely. A few days passed and she finally went to go see her mom, I didn't go because I was busy at work but when she came back she mentioned how my MIL was asking about me and how things were going between my wife and I, which I didn't really pay much attention to until my MIL began sending me explicit pictures.</p>
+                        <p>In the beginning I panicked and blocked her for two days, but ultimately unblocked her and just put a password on my phone so my wife wouldn't see any of it, I changed my MIL's name and picture to a friends so my wife wouldn't be suspicious that her mother was texting me so much. My MIL and I began talking regularly again and even began sending explicit pictures to each other, but we never had sex since we never found time. Now here is where I need outsiders advice, I confided in a close friend about what happened, I told him everything and made sure to add my wife's suspicious behavior.</p>
+                        <p>He immediately told me I had no right to suspect my wife with no proof but I argued that her suspicious behavior, getting a password, not calling for four days, and the creepy touchy pictures with her 'friend' were proof enough. He didn't agree and instead told me I was in the wrong and a 'freak' for sleeping with my 43 yr MIL, saying she was too old and it wasn't right even though my MIL is a beautiful women and takes care of her body, more than my wife at times.</p>
+                        <p>Now he's saying that he'll tell my wife what I've done and that she will surely get a divorce. I begged him not to, I still love my wife and I still want to be with her, he called me an asshole and disgusting before giving me an ultimatum, either I will have to tell her or he will.</p>
+                        <p><b>Should I tell my wife? and AITA?</b></p>
+                    </div>
+                </article>
             </div>
-        </article>
+        </div>
+
+        <!-- Sidebar Ads (1 ad 600x160, 1 ad 60x468, and 2 ads 90x728) -->
+        <aside>
+            <div class="ad-box">
+                <!-- 600x160 Ad -->
+                <script>
+                  atOptions = {
+                    'key' : '388fda46d0c4b56c76ed6ba31e9e3083',
+                    'format' : 'iframe',
+                    'height' : 600,
+                    'width' : 160,
+                    'params' : {}
+                  };
+                </script>
+                <script src="https://preliminarycultural.com/388fda46d0c4b56c76ed6ba31e9e3083/invoke.js"></script>
+            </div>
+
+            <div class="ad-box">
+                <!-- 60x468 Ad -->
+                <script>
+                  atOptions = {
+                    'key' : 'e7b9ac790220447bb919b26a08c7483e',
+                    'format' : 'iframe',
+                    'height' : 60,
+                    'width' : 468,
+                    'params' : {}
+                  };
+                </script>
+                <script src="https://preliminarycultural.com/e7b9ac790220447bb919b26a08c7483e/invoke.js"></script>
+            </div>
+
+            <div class="ad-box">
+                <!-- 90x728 Ad 1 -->
+                <script>
+                  atOptions = {
+                    'key' : '752a995c34b387bdfa57bf0172c22be1',
+                    'format' : 'iframe',
+                    'height' : 90,
+                    'width' : 728,
+                    'params' : {}
+                  };
+                </script>
+                <script src="https://preliminarycultural.com/752a995c34b387bdfa57bf0172c22be1/invoke.js"></script>
+            </div>
+
+            <div class="ad-box">
+                <!-- 90x728 Ad 2 -->
+                <script>
+                  atOptions = {
+                    'key' : '752a995c34b387bdfa57bf0172c22be1',
+                    'format' : 'iframe',
+                    'height' : 90,
+                    'width' : 728,
+                    'params' : {}
+                  };
+                </script>
+                <script src="https://preliminarycultural.com/752a995c34b387bdfa57bf0172c22be1/invoke.js"></script>
+            </div>
+        </aside>
+
     </div>
 
     <footer>
+        <!-- Footer Ads (3 ads: 90x728, 1 ad: 600x160, 1 ad: 60x468) -->
+        <div class="footer-ads">
+            <div class="footer-ads-row">
+                <!-- 90x728 Ad 1 -->
+                <div>
+                    <script>
+                      atOptions = {
+                        'key' : '752a995c34b387bdfa57bf0172c22be1',
+                        'format' : 'iframe',
+                        'height' : 90,
+                        'width' : 728,
+                        'params' : {}
+                      };
+                    </script>
+                    <script src="https://preliminarycultural.com/752a995c34b387bdfa57bf0172c22be1/invoke.js"></script>
+                </div>
+                <!-- 90x728 Ad 2 -->
+                <div>
+                    <script>
+                      atOptions = {
+                        'key' : '752a995c34b387bdfa57bf0172c22be1',
+                        'format' : 'iframe',
+                        'height' : 90,
+                        'width' : 728,
+                        'params' : {}
+                      };
+                    </script>
+                    <script src="https://preliminarycultural.com/752a995c34b387bdfa57bf0172c22be1/invoke.js"></script>
+                </div>
+            </div>
+            <div class="footer-ads-row">
+                <!-- 90x728 Ad 3 -->
+                <div>
+                    <script>
+                      atOptions = {
+                        'key' : '752a995c34b387bdfa57bf0172c22be1',
+                        'format' : 'iframe',
+                        'height' : 90,
+                        'width' : 728,
+                        'params' : {}
+                      };
+                    </script>
+                    <script src="https://preliminarycultural.com/752a995c34b387bdfa57bf0172c22be1/invoke.js"></script>
+                </div>
+                <!-- 600x160 Ad -->
+                <div>
+                    <script>
+                      atOptions = {
+                        'key' : '388fda46d0c4b56c76ed6ba31e9e3083',
+                        'format' : 'iframe',
+                        'height' : 600,
+                        'width' : 160,
+                        'params' : {}
+                      };
+                    </script>
+                    <script src="https://preliminarycultural.com/388fda46d0c4b56c76ed6ba31e9e3083/invoke.js"></script>
+                </div>
+                <!-- 60x468 Ad -->
+                <div>
+                    <script>
+                      atOptions = {
+                        'key' : 'e7b9ac790220447bb919b26a08c7483e',
+                        'format' : 'iframe',
+                        'height' : 60,
+                        'width' : 468,
+                        'params' : {}
+                      };
+                    </script>
+                    <script src="https://preliminarycultural.com/e7b9ac790220447bb919b26a08c7483e/invoke.js"></script>
+                </div>
+            </div>
+        </div>
+
         <div class="footer-content">
             <p style="font-weight: 600; font-size: 16px;">My Confessions</p>
             <ul class="footer-links">
